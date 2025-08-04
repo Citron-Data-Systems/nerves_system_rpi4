@@ -65,9 +65,14 @@ enable_uart=1
 
 # Comment this in or modify to enable PWM
 # dtoverlay=pwm
+dtoverlay=mcp2515-can0,oscillator=8000000,interrupt=25
+dtoverlay=spi-bcm2835
+# force_turbo=1
 
 [cm4]
 # Raspberry Pi CM4-only settings
 
 # For the CM4 I/O board, USB is disabled by default. This enables it.
 dtoverlay=dwc2,dr_mode=host
+
+
